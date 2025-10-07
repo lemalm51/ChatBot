@@ -12,23 +12,53 @@
 
 body{
     width: 100%;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     min-height: 100vh;
     background: linear-gradient(#F4F0FF,#DACDFF);
 }
 
 .chatbot-popup{
-    position: relative;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 90px;
+    right:35px;
     width: 420px;
    background: #fff; 
    overflow: hidden;
+   transform: scale(0.2);
    border-radius: 15px;
+   transform-origin:bottom right ;
    box-shadow: 0 0 128px 0 rgb(0, 0, 0.0.1),
    0 32px 64px -48px rgb(0, 0, 0,0.5);
+   transition: all 0.1s ease;
 }
 
+.container.show-chatbot .chatbot-popup{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+.container .show-chatbot #chatbot-toggler{
+/* transform: rotate(90deg); */
+} 
+
+#chatbot-toggler span:first-child { /* mode_comment icon */
+    opacity: 1; /* Visible */
+}
+#chatbot-toggler span:last-child {  /* close icon */
+    opacity: 0; /* Hidden by default */
+}
+
+/* 2. Active State (Chatbot Open - .show-chatbot is present) */
+.container.show-chatbot #chatbot-toggler span:first-child { /* Hide mode_comment icon */
+    opacity: 0;
+}
+.container.show-chatbot #chatbot-toggler span:last-child { /* Show close icon */
+    opacity: 1;
+}
 .chatbot-popup .chat-header{
     display: flex;
     padding: 15px 20px;
@@ -93,7 +123,27 @@ body{
     scrollbar-color: #DDD3F9 transparent;
 }
 
+#chatbot-toggler{
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #6D4FC2;
+    align-items: center;
+    justify-content: center;
+    /* transform: all 0.2s ease; */
+    
+}
 
+#chatbot-toggler span{
+    position: absolute;
+    color: #fff;
+}
 
 .chat-body .message{
     display: flex;
@@ -194,4 +244,24 @@ background: #593bab;
 
 .chat-form .message-input:valid~button{
     display: block;
+}
+
+
+.material_symbols-rounded,
+.material-symbols-rounded { /* Added both for safety */
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Adjust size as needed */
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  /* Crucially, the FILL and WEIGHT values from the link tag must be applied: */
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
