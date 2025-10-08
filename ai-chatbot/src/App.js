@@ -72,7 +72,7 @@ chatBodyRef.current.scrollTo({ top:chatBodyRef.current.scrollHeight,behavior:"sm
           
       <img src={ ChatIcon } alt="icon" className="bot-icon" id="photo"/>
 
-        <h1>🤝𝐖𝐄𝐋𝐂𝐎𝐌𝐄 TO MY CHATBOT</h1>
+        <h1>🤝𝐖𝐄𝐋𝐂𝐎𝐌𝐄 TO MY CHATBOT.</h1>
 
       <button onClick={()=> setShowChatbot((prev) => !prev)} id='chatbot-toggler'>
 

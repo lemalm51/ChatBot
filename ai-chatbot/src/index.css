@@ -18,9 +18,13 @@ body{
     border-radius: 50%;
     padding: 10px;
     background: black;
+    text-align: center;
+    margin-left: 200px;
+    
 }
+
 h1{
-    margin-top: 100px;
+margin-top: 30px;
 text-align: center;
 font-family:  "Asimovian", sans-serif;;
 }
@@ -87,7 +91,7 @@ font-family:  "Asimovian", sans-serif;;
     padding: 15px 20px;
     align-items: center;
     justify-content: space-between;
-    background: #444;
+    background:black;
 
     
 }

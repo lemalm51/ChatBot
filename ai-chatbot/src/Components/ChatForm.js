@@ -29,7 +29,7 @@ const ChatForm = ({chatHistory, setChatHistory , generateBotResponse}) => {
     }
     return (
           <form action="#" className='chat-form' onSubmit={handleFormSubmit}>
-            <input ref={ inputRef} type='text' placeholder='message...' className='message-input' required />
+            <input ref={ inputRef} type='text' placeholder='Ask chatbot...' className='message-input' required />
             <button className="material-symbols-rounded">arrow_upward</button>
           </form>
     )
