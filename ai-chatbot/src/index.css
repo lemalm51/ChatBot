@@ -104,6 +104,7 @@ font-family:  "Asimovian", sans-serif;
 .container.show-chatbot #chatbot-toggler span:last-child { /* Show close icon */
     opacity: 1;
 }
+
 .chatbot-popup .chat-header{
     display: flex;
     padding: 15px 20px;

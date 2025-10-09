@@ -70,7 +70,7 @@ chatBodyRef.current.scrollTo({ top:chatBodyRef.current.scrollHeight,behavior:"sm
     
     <div className={`container ${showChatbot ? "show-chatbot" : ""}`}>
           
-      <img src={ myphoto} alt="icon" className="myphoto" id="photo"/>
+      <img src={ myphoto} alt="icon" className="bot-icon" id="photo"/>
 
        <h1 className="welcome-text">🤝𝐖𝐄𝐋𝐂𝐎𝐌𝐄 TO MY CHATBOT.</h1>
 
@@ -112,6 +112,7 @@ chatBodyRef.current.scrollTo({ top:chatBodyRef.current.scrollHeight,behavior:"sm
             <ChatbotIcon />
 
             <p className='message-text'> 
+
               Hi 🖐 everyone, You Can ask my chatbot what you want...
               <br /> You Can Get Brief and Clear Information!!
 
