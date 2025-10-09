@@ -22,12 +22,13 @@ body{
     margin-left: 200px;
     
 }
-
 h1{
+
 margin-top: 30px;
 text-align: center;
-font-family:  "Asimovian", sans-serif;;
+font-family:  "Asimovian", sans-serif;
 }
+
 .bot-icon {
     height: 100px;
 }
@@ -49,7 +50,7 @@ font-family:  "Asimovian", sans-serif;;
   font-weight: 600;
 }
 
-.chatbot-popup{
+.chatbot-popup {
     position: fixed;
     opacity: 0;
     pointer-events: none;
@@ -58,28 +59,45 @@ font-family:  "Asimovian", sans-serif;;
     width: 420px;
    background: #fff; 
    overflow: hidden;
-   transform: scale(0.2);
+   transform: scale(0.1);
    border-radius: 15px;
    transform-origin:bottom right ;
    box-shadow: 0 0 128px 0 rgb(0, 0, 0.0.1),
    0 32px 64px -48px rgb(0, 0, 0,0.5);
-   transition: all 0.1s ease;
+   transition: all  0.2s ease ;
 }
 
-.container.show-chatbot .chatbot-popup{
+.container.show-chatbot .chatbot-popup  {
     opacity: 1;
     transform: scale(1);
     pointer-events: auto;
+   
+
+
+}
+.container.show-chatbot .welcome-text {
+  opacity: 0;
 }
 
+.container.show-chatbot .myphoto{
+  opacity: 0;
+
+}
+
+/* optional to show how it actually work */
 #chatbot-toggler span:first-child { /* mode_comment icon */
-    opacity: 1; /* Visible */
+    opacity: 1; 
+    /* Visible */
 }
-#chatbot-toggler span:last-child {  /* close icon */
-    opacity: 0; /* Hidden by default */
-}
+#chatbot-toggler span:last-child { 
+    /* // close icon */
+     opacity: 0;  
+    
+} 
+
 
 /* 2. Active State (Chatbot Open - .show-chatbot is present) */
+
 .container.show-chatbot #chatbot-toggler span:first-child { /* Hide mode_comment icon */
     opacity: 0;
 }

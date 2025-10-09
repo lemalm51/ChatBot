@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import ChatMessage from "./Components/ChatMessage";
 import ChatbotIcon from './Components/ChatbotIcon';
 import ChatForm from './Components/ChatForm';
-import ChatIcon from "./Components/images/lm.png"
+import myphoto from "./Components/images/lm.png"
 
 const App = () => {
 
@@ -70,15 +70,18 @@ chatBodyRef.current.scrollTo({ top:chatBodyRef.current.scrollHeight,behavior:"sm
     
     <div className={`container ${showChatbot ? "show-chatbot" : ""}`}>
           
-      <img src={ ChatIcon } alt="icon" className="bot-icon" id="photo"/>
+      <img src={ myphoto} alt="icon" className="myphoto" id="photo"/>
 
-        <h1>🤝𝐖𝐄𝐋𝐂𝐎𝐌𝐄 TO MY CHATBOT.</h1>
+       <h1 className="welcome-text">🤝𝐖𝐄𝐋𝐂𝐎𝐌𝐄 TO MY CHATBOT.</h1>
 
+        
       <button onClick={()=> setShowChatbot((prev) => !prev)} id='chatbot-toggler'>
 
       <span className='material-symbols-rounded'>mode_comment</span>
 
       <span className='material-symbols-rounded'>close</span>
+
+
       </button>
 
       <div className='chatbot-popup'>
